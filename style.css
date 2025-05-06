@@ -1,20 +1,96 @@
+/* Reset some default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: sans-serif;
-  padding: 20px;
-  background-color: #f5f5f5;
-}
-h1 {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #f0f2f5;
   color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
+
+h1, h2 {
+  color: #222;
+  margin-bottom: 20px;
+}
+
+nav {
+  margin-bottom: 30px;
+}
+
 nav a {
-  margin-right: 10px;
+  display: inline-block;
+  margin-right: 15px;
+  text-decoration: none;
+  color: #007BFF;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
+
+nav a:hover {
+  color: #0056b3;
+}
+
 .product {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
   background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
+
 .product img {
-  max-width: 150px;
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 16px;
+  color: #555;
+}
+
+iframe {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+a.button-link {
+  display: inline-block;
+  background: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+a.button-link:hover {
+  background: #0056b3;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .product {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product img {
+    width: 100%;
+  }
 }
